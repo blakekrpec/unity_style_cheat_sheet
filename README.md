@@ -118,7 +118,7 @@
   ```
 - **Spreading Out Expensive Operations**: Use coroutines to spread out expensive operations, like loading a scene, over multiple frames to avoid performance spikes.
   ```csharp
-  rivate IEnumerator ProcessLargeTask(List<int> data) {
+  private IEnumerator ProcessLargeTask(List<int> data) {
      for (int i = 0; i < data.Count; i++) {
          // Process data[i] here
          
@@ -127,7 +127,7 @@
      }
   }
   
-  rivate void StartProcessing() {
+  private void StartProcessing() {
      StartCoroutine(ProcessLargeTask(largeDataList));
   }
   ```
